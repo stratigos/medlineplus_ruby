@@ -1,0 +1,3 @@
+module MedlineplusRuby
+  VERSION = "0.1.0"
+end
