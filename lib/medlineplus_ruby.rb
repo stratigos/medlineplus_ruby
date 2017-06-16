@@ -1,5 +1,5 @@
-require "medlineplus_ruby/version"
+require 'medlineplus_ruby/version'
+require 'medlineplus_ruby/client'
 
 module MedlineplusRuby
-  # Your code goes here...
 end
