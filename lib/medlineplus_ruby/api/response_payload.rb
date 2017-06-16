@@ -9,7 +9,7 @@ module MedlineplusRuby
       end
 
       # Currently only supports 'application/json' responses.
-      def respond(api_response_body, api_response_status)
+      def respond(api_response_body)
         formatted_response = {
           success: false,
           errors: [],

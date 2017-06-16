@@ -111,4 +111,22 @@ RSpec.configure do |config|
   # test failures related to randomization by passing the same `--seed` value
   # as the one that triggered the failure.
   # Kernel.srand config.seed
+
+  # Setup hooks.
+  config.before(:context) do
+    # Define simple values for external API testing.
+    @test_code         = 'J01.01'
+    @bad_code          = 'nerf'
+    @api_url           = 'https://apps.nlm.nih.gov/medlineplus/services/mpconnect_service.cfm'
+    @api_query_param   = 'mainSearchCriteria.v.c'
+    @api_response_body = '{"feed":{
+      "subtitle": {
+        "_value": "MedlinePlus Connect results for ICD-10-CM J11.10",
+        "type": "text" },
+      "entry":[{
+        "title": {"_value": "Sinusitis"},
+        "link": [{"title": "Sinusitis", "href": "https://medlineplus.gov/sinusitis.html"}],
+        "summary": {"_value": "Sinusitis means your sinuses are inflamed."}}]}}'
+  end
+
 end

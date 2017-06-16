@@ -36,7 +36,7 @@ module MedlineplusRuby
         raise MedlineplusRuby::Error,
           MedlineplusRuby::API::ResponseMessage::ERROR_NO_RESPONSE if response.nil? || response.empty?
 
-        @response_payload.respond response.body, response.code
+        @response_payload.respond response.body
       end
 
     end
