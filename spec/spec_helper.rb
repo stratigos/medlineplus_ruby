@@ -119,6 +119,11 @@ RSpec.configure do |config|
     @bad_code          = 'nerf'
     @api_url           = 'https://apps.nlm.nih.gov/medlineplus/services/mpconnect_service.cfm'
     @api_query_param   = 'mainSearchCriteria.v.c'
+    @api_query_params  = {
+      @api_query_param          => @test_code,
+      'mainSearchCriteria.v.cs' => '2.16.840.1.113883.6.90',
+      'knowledgeResponseType'   => 'application/json'
+    }
     @api_response_body = '{"feed":{
       "subtitle": {
         "_value": "MedlinePlus Connect results for ICD-10-CM J11.10",
