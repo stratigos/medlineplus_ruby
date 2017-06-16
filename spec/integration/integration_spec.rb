@@ -2,14 +2,6 @@
 
 RSpec.describe MedlineplusRuby do
 
-  before :all do
-    WebMock.disable_net_connect! allow_localhost: true
-  end
-
-  after :all do
-    WebMock.allow_net_connect!
-  end
-
   it 'retrieves ICD-10 diagnosis code information' do
 
     stub_request(:get, @api_url).
