@@ -40,7 +40,7 @@ RSpec.describe MedlineplusRuby::API::Request do
 
       context 'when called with valid diagnosis code and parameters' do
 
-        let(:medline_request) { instance_double('MedlineplusRuby::API::Request') }
+        let(:medline_request) { instance_double MedlineplusRuby::API::Request }
 
         it 'returns a formatted response' do
           allow(medline_request).to receive(:get_request).and_return(formatted_response)
