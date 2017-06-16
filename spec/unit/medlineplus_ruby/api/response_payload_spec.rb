@@ -1,4 +1,3 @@
-
 RSpec.describe MedlineplusRuby::API::ResponsePayload do
 
   subject { MedlineplusRuby::API::ResponsePayload.new }
