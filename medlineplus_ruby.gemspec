@@ -17,6 +17,7 @@ Gem::Specification.new do |spec|
     'inconsistant, and are always non intuitive. This gem simplifies querying the NLM API, and parses the responses '\
     'into something more sane and structured for the average Ruby dev to use. Note that at this time, the only ' \
     'feature available through this gem is querying descriptions for ICD-10 codes, more API interfaces TBD.'
+  spec.post_install_message = 'Thanks for trying medlineplus_ruby!'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the
   #  'allowed_push_host' to allow pushing to a single host or delete this
@@ -32,9 +33,10 @@ Gem::Specification.new do |spec|
     f.match(%r{^(test|spec|features)/})
   end
 
-  spec.bindir        = 'exe'
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
-  spec.require_paths = ['lib']
+  # spec.bindir        = 'exe'
+  # spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.require_paths         = ['lib']
+  spec.required_ruby_version = '>= 2.4.1'
 
   spec.add_development_dependency 'bundler', '~> 1.14'
   spec.add_development_dependency 'pry'
